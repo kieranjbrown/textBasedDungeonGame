@@ -19,6 +19,11 @@ class PlayerTest {
     }
 
     @Test
+    void setsNameCorrectly() {
+        assertThat(new Player("Kieran").getName()).isEqualTo("Kieran");
+    }
+
+    @Test
     void inventoryIsConstructedEmpty() {
         final Player player = new Player("Kieran");
         assertThat(player.getInventory()).isNotNull().isEmpty();
@@ -30,5 +35,12 @@ class PlayerTest {
         final Item item = new Torch();
         player.addToInventory(item);
         assertThat(player.getInventory()).isNotNull().isNotEmpty().containsOnly(item);
+    }
+
+    @Test
+    void passingNullToAddToInventoryWillThrow() {
+        final Player player = new Player("kieran");
+        assertThat(assertThrows(NullPointerException.class, () -> player.addToInventory(null)))
+                .hasMessage("item cannot be null");
     }
 }
