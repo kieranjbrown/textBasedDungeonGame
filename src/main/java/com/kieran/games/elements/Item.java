@@ -1,4 +1,4 @@
 package com.kieran.games.elements;
 
-public class Item {
+public interface Item {
 }

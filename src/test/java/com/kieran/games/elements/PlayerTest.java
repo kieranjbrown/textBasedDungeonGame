@@ -27,7 +27,7 @@ class PlayerTest {
     @Test
     void canAddToInventory() {
         final Player player = new Player("Kieran");
-        final Item item = new Item();
+        final Item item = new Torch();
         player.addToInventory(item);
         assertThat(player.getInventory()).isNotNull().isNotEmpty().containsOnly(item);
     }
