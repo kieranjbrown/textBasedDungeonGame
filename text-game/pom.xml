@@ -10,7 +10,7 @@
 
     <properties>
         <assertj.version>3.12.2</assertj.version>
-        <commons-lang3.version>3.9</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
         <junit.version>5.5.2</junit.version>
         <vavr.version>0.10.2</vavr.version>
     </properties>
